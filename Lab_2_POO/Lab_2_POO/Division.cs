@@ -13,13 +13,19 @@ namespace Lab_2_POO
     [Serializable]
     public class Division
     {
+        private string Nombre;
         private Persona Encargado;
         private List<Persona> Empleados;
         
-        public Division(Persona encargado, List<Persona> empleados)
+        public Division(string name, Persona encargado)
         {
             Encargado = encargado;
-            Empleados = empleados;
+            Nombre = name;
+        }
+
+        public string Get_Nombre()
+        {
+            return Nombre;
         }
 
         public Persona Get_Encargado()
@@ -27,9 +33,5 @@ namespace Lab_2_POO
             return Encargado;
         }
 
-        public List<Persona> Get_Empleados()
-        {
-            return Empleados;
-        }
     }
 }

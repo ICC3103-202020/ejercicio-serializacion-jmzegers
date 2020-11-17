@@ -8,7 +8,8 @@ namespace Lab_2_POO
     {
         private List<Bloque> Bloques;
         
-        public Seccion(Persona encargado, List<Persona> empleados, List<Bloque> bloques) : base(encargado, empleados)
+        public Seccion(string nombre, Persona encargado, List<Bloque> bloques)
+            : base(nombre, encargado)
         {
             Bloques = bloques;
         }

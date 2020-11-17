@@ -8,10 +8,10 @@ namespace Lab_2_POO
     {
         //en particular, para los bloques existe además personal general.
 
-        private List<Persona> Personal_General;
+        private readonly List<Persona> Personal_General;
         
-        public Bloque(Persona encargado, List<Persona> empleados, List<Persona> personal_general)
-            : base(encargado, empleados)
+        public Bloque(string nombre, Persona encargado, List<Persona> personal_general)
+            : base(nombre, encargado)
         {
             Personal_General = personal_general;
         }

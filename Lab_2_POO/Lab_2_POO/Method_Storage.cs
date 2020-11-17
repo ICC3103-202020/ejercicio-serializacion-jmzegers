@@ -58,7 +58,7 @@ namespace Lab_2_POO
                         options.Contains(answer);
                         break;
                     }
-                    catch (Exception e)
+                    catch
                     {
                         Console.WriteLine("Esta opción no es válida!");
                     }
@@ -76,8 +76,7 @@ namespace Lab_2_POO
                 {
                     Console.WriteLine("Por favor, ingrese el RUT de su empresa");
                     Console.WriteLine("Sin puntos ni guión");
-                    RUT = 0;
-                    
+
                     while (true)
                     {
                         try
@@ -85,7 +84,7 @@ namespace Lab_2_POO
                             RUT = Convert.ToInt32(Console.ReadLine());
                             break;
                         }
-                        catch (InvalidCastException e)
+                        catch
                         {
                             Console.WriteLine(" ");
                             Console.WriteLine("Lo que ha dado no es un RUT válido");
@@ -99,6 +98,28 @@ namespace Lab_2_POO
                 }
             }
             return RUT;
+        }
+
+        public List<string> Random_Name_Creator()
+        {
+            List<string> nombres = new List<string>()
+                { "Antonio", "Francisca", "Gonzalo", "Isabel",
+                "Ignacio", "Lucía", "Agustín" };
+
+            List<string> apellidos = new List<string>() { "Fernández", "Caraval", "Tapia",
+                    "Antonelli", "Díaz" };
+
+            Random random = new Random();
+
+            int a1 = random.Next(0, 7);
+            string random_name = nombres[a1];
+
+            int a2 = random.Next(0, 5);
+            string random_last_name = apellidos[a2];
+
+            List<string> name = new List<string>() { random_name, random_last_name };
+
+            return name;
         }
 
     }

@@ -13,10 +13,7 @@ namespace Lab_2_POO
              * Actualice el Main, de tal manera que cuando se lea el archivo de ”empresa.bin”, recorra la
              * estructura de la empresa imprimiendo en consola el nombre de cada división con su encargado
              * hasta llegar a los bloques e imprimir el nombre del personal del bloque.
-             * Si no existe dicho archivo, con manejo de excepciones, solicite los datos de la empresa como en
-             * la Parte 1 y después su programa debe crear un departamento, una sección y dos bloques donde
-             * cada división tenga un encargado único y en cada bloque deben haber 2 personas como parte del
-             * personal.
+
              * Finalmente debe serializar la empresa en un archivo con nombre ”empresa.bin”.
              */
 
@@ -47,7 +44,7 @@ namespace Lab_2_POO
                     Console.WriteLine(" ");
                     Console.WriteLine("Por favor, ingrese el RUT de su empresa");
                     Console.WriteLine("Sin puntos ni guión");
-                    int rut_empresa = 0;
+                    int rut_empresa;
                     while (true)
                     {
                         try
@@ -55,7 +52,7 @@ namespace Lab_2_POO
                             rut_empresa = Convert.ToInt32(Console.ReadLine());
                             break;
                         }
-                        catch (InvalidCastException e)
+                        catch
                         {
                             Console.WriteLine(" ");
                             Console.WriteLine("Lo que ha dado no es un RUT válido");
@@ -68,8 +65,46 @@ namespace Lab_2_POO
                     List<Empresa> empresaList = new List<Empresa>();
                     Empresa.Almacenar_Datos_Empresa(empresaList);
                 }
+
+                /* Cuando se lea el archivo de ”empresa.bin”, recorra la 
+                 * estructura de la empresa imprimiendo en consola el 
+                 * nombre de cada división con su encargado hasta llegar 
+                 * a los bloques e imprimir el nombre del personal del bloque.
+                 */
+                else
+                {
+                    foreach (Empresa e in EmpresaList)
+                    {
+                        Console.WriteLine(e.Get_Nombre());
+                        List<Division> lista_divisiones = e.Get_Divisiones();
+                        foreach (Area a in lista_divisiones)
+                        {
+                            Console.WriteLine(a.Get_Nombre());
+                            foreach (Departamento depto in a.Get_Deptos())
+                            {
+                                Console.WriteLine(depto.Get_Nombre());
+                                foreach (Seccion seccion in depto.Get_Secciones())
+                                {
+                                    Console.WriteLine(seccion.Get_Nombre());
+                                    foreach (Bloque bloque in seccion.Get_Bloques())
+                                    {
+                                        Console.WriteLine(bloque.Get_Nombre());
+                                        foreach (Persona empleado in bloque.Get_Empleados())
+                                        {
+                                            Console.WriteLine(empleado.Get_Nombre());
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                
+
             }
             
+
 
             /* Si el usuario indica que no, entonces solicite al usuario que ingrese el nombre y rut de
              * la empresa y guarde estos datos en un archivo llamado ”empresa.bin” utilizando BinaryFormatter.
@@ -82,8 +117,8 @@ namespace Lab_2_POO
 
                 Console.WriteLine(" ");
                 Console.WriteLine("Por favor, ingrese el RUT de su empresa");
-                Console.WriteLine("Sin puntos ni guión");
-                int rut_empresa = 0;
+                Console.WriteLine("Sin puntos ni guión. Si es K, escriba un cero");
+                int rut_empresa;
                 while (true)
                 {
                     try
@@ -91,11 +126,12 @@ namespace Lab_2_POO
                         rut_empresa = Convert.ToInt32(Console.ReadLine());
                         break;
                     }
-                    catch(InvalidCastException e)
+                    catch
                     {
                         Console.WriteLine(" ");
                         Console.WriteLine("Lo que ha dado no es un RUT válido");
                         Console.WriteLine("Por favor, ingrese el RUT de su empresa");
+                        Console.WriteLine("Sin puntos ni guión. Si es K, escriba un cero");
                     }
                 }
 

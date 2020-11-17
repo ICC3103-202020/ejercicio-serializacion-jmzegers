@@ -11,8 +11,8 @@ namespace Lab_2_POO
 
         private List<Departamento> Departamentos;
         
-        public Area(Persona encargado, List<Persona> empleados, List<Departamento> departamentos)
-            : base(encargado, empleados)
+        public Area(string nombre, Persona encargado, List<Departamento> departamentos)
+            : base(nombre, encargado)
         {
             Departamentos = departamentos;
         }

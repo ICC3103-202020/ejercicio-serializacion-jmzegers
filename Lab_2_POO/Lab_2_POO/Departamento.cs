@@ -10,7 +10,8 @@ namespace Lab_2_POO
 
         private List<Seccion> Secciones;
         
-        public Departamento(Persona encargado, List<Persona> empleados, List<Seccion> secciones) : base(encargado, empleados)
+        public Departamento(string nombre, Persona encargado, List<Seccion> secciones)
+            : base(nombre, encargado)
         {
             Secciones = secciones;
         }
