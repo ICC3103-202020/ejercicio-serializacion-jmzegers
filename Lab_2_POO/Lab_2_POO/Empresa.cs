@@ -8,19 +8,21 @@ using System.Runtime.Serialization;
 namespace Lab_2_POO
 {
     [Serializable]
-    public class Empresa : ISerializable
+    public class Empresa
     {
         /*Defina una clase Empresa que tenga nombre y rut de la empresa.
         */
 
         private string Nombre_Empresa;
-
         private int Rut_Empresa;
+        private List<Division> Divisiones;
 
+        //Agregue a su empresa una lista de divisiones.
         public Empresa(string name, int rut)
         {
-            nombre_empresa = Nombre_Empresa;
-            rut_empresa = Rut_Empresa;
+            name = Nombre_Empresa;
+            rut = Rut_Empresa;
+            List<Division> divisiones = Divisiones;
         }
 
 
@@ -35,16 +37,9 @@ namespace Lab_2_POO
             return Rut_Empresa;
         }
 
-        public void GetObjectData(SerializationInfo info, StreamingContext context)
+        public List<Division> Get_Divisiones()
         {
-            info.AddValue("Nombre Empresa", Nombre_Empresa);
-            info.AddValue("RUT Empresa", Rut_Empresa);
-        }
-
-        public Empresa(SerializationInfo info, StreamingContext context)
-        {
-            Nombre_Empresa = (string)info.GetValue("Nombre Empresa", typeof(string));
-            Rut_Empresa = (int)info.GetValue("Rut Empresa", typeof(int));
+            return Divisiones;
         }
 
         public static void Almacenar_Datos_Empresa(List<Empresa> e)

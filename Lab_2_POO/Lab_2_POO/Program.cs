@@ -9,6 +9,15 @@ namespace Lab_2_POO
         {
             /* En su método Main, pregunte al usuario si quiere utilizar un archivo para cargar la información
              * de la empresa
+             * 
+             * Actualice el Main, de tal manera que cuando se lea el archivo de ”empresa.bin”, recorra la
+             * estructura de la empresa imprimiendo en consola el nombre de cada división con su encargado
+             * hasta llegar a los bloques e imprimir el nombre del personal del bloque.
+             * Si no existe dicho archivo, con manejo de excepciones, solicite los datos de la empresa como en
+             * la Parte 1 y después su programa debe crear un departamento, una sección y dos bloques donde
+             * cada división tenga un encargado único y en cada bloque deben haber 2 personas como parte del
+             * personal.
+             * Finalmente debe serializar la empresa en un archivo con nombre ”empresa.bin”.
              */
 
             Method_Storage ms = new Method_Storage();

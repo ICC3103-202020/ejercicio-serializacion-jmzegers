@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jmzeg_ibef1f0\\source\\repos\\Lab_2_POO\\Lab_2_POO\\Lab_2_POO.csproj",
+      "projectUniqueName": "C:\\Users\\jmzeg_ibef1f0\\OneDrive\\Desktop\\ejercicio-serializacion-jmzegers\\Lab_2_POO\\Lab_2_POO\\Lab_2_POO.csproj",
       "projectName": "Lab_2_POO",
-      "projectPath": "C:\\Users\\jmzeg_ibef1f0\\source\\repos\\Lab_2_POO\\Lab_2_POO\\Lab_2_POO.csproj",
+      "projectPath": "C:\\Users\\jmzeg_ibef1f0\\OneDrive\\Desktop\\ejercicio-serializacion-jmzegers\\Lab_2_POO\\Lab_2_POO\\Lab_2_POO.csproj",
       "packagesPath": "C:\\Users\\jmzeg_ibef1f0\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jmzeg_ibef1f0\\source\\repos\\Lab_2_POO\\Lab_2_POO\\obj\\",
+      "outputPath": "C:\\Users\\jmzeg_ibef1f0\\OneDrive\\Desktop\\ejercicio-serializacion-jmzegers\\Lab_2_POO\\Lab_2_POO\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jmzeg_ibef1f0\\AppData\\Roaming\\NuGet\\NuGet.Config",
