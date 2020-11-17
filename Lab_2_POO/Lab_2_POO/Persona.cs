@@ -13,17 +13,22 @@ namespace Lab_2_POO
         /* Además defina una clase ”Persona” que tenga la información básica del personal (nombre, apellido,
          * rut, cargo).
          */
-        private string Nombre;
-        private string Apellido;
-        private int RUT;
-        private string Cargo;
+        private string nombre;
+        private string apellido;
+        private int rut;
+        private string cargo;
+
+        public string Nombre { get => nombre; set => nombre = value; }
+        public string Apellido { get => apellido; set => apellido = value; }
+        public int Rut { get => rut; set => rut = value; }
+        public string Cargo { get => cargo; set => cargo = value; }
 
         public Persona(string nombre, string apellido, int rut, string cargo)
         {
-            Nombre = nombre;
-            Apellido = apellido;
-            RUT = rut;
-            Cargo = cargo;
+            this.nombre = nombre;
+            this.apellido = apellido;
+            this.rut = rut;
+            this.cargo = cargo;
         }
 
         public string Get_Nombre()
@@ -38,7 +43,7 @@ namespace Lab_2_POO
 
         public int Get_RUT()
         {
-            return RUT;
+            return Rut;
         }
 
         public string Get_Cargo()

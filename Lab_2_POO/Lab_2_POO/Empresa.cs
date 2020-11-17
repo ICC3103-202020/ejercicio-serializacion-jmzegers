@@ -13,39 +13,42 @@ namespace Lab_2_POO
         /*Defina una clase Empresa que tenga nombre y rut de la empresa.
         */
 
-        private string Nombre_Empresa;
-        private int Rut_Empresa;
-        private List<Division> Divisiones;
+        private string nombre_Empresa;
+        private int rut_Empresa;
+        private List<Division> divisiones = new List<Division>();
+
+        public string Nombre_Empresa { get => nombre_Empresa; set => nombre_Empresa = value; }
+        public int Rut_Empresa { get => rut_Empresa; set => rut_Empresa = value; }
+        public List<Division> Divisiones { get => divisiones; set => divisiones = value; }
 
         //Agregue a su empresa una lista de divisiones.
         public Empresa(string name, int rut)
         {
-            name = Nombre_Empresa;
-            rut = Rut_Empresa;
-            List<Division> divisiones = Divisiones;
+            nombre_Empresa = name;
+            rut_Empresa = rut;
         }
 
 
 
         public string Get_Nombre()
         {
-            return Nombre_Empresa;
+            return nombre_Empresa;
         }
 
         public int Get_RUT()
         {
-            return Rut_Empresa;
+            return rut_Empresa;
         }
 
         public List<Division> Get_Divisiones()
         {
-            return Divisiones;
+            return divisiones;
         }
 
         public static void Almacenar_Datos_Empresa(List<Empresa> e)
         {
             IFormatter empresa_formatter = new BinaryFormatter();
-            Stream empresa_stream = new FileStream("../../empresa.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
+            Stream empresa_stream = new FileStream("empresa.bin", FileMode.OpenOrCreate, FileAccess.Write, FileShare.None);
             empresa_formatter.Serialize(empresa_stream, e);
             empresa_stream.Close();
         }

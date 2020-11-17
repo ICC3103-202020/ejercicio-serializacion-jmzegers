@@ -19,7 +19,8 @@ namespace Lab_2_POO
 
             Method_Storage ms = new Method_Storage();
 
-            string message = "Desea utilizar un archivo para cargar la información de su empresa?";
+            string message = "Desea utilizar un archivo para cargar la información de su empresa? [Y/N]";
+            Console.WriteLine(message);
             List<string> options = new List<string>() { "Y", "N" };
             string answer = Convert.ToString(Console.ReadLine());
 
@@ -89,7 +90,7 @@ namespace Lab_2_POO
                                     foreach (Bloque bloque in seccion.Get_Bloques())
                                     {
                                         Console.WriteLine(bloque.Get_Nombre());
-                                        foreach (Persona empleado in bloque.Get_Empleados())
+                                        foreach (Persona empleado in bloque.Get_Personal_General())
                                         {
                                             Console.WriteLine(empleado.Get_Nombre());
                                         }

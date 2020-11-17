@@ -4,17 +4,21 @@ using System.Text;
 
 namespace Lab_2_POO
 {
+    [Serializable]
     public class Bloque : Division
     {
         //en particular, para los bloques existe además personal general.
 
-        private readonly List<Persona> Personal_General;
-        
+        private List<Persona> personal_General;
+        public List<Persona> Personal_General { get => personal_General; set => personal_General = value; }
+
         public Bloque(string nombre, Persona encargado, List<Persona> personal_general)
             : base(nombre, encargado)
         {
-            Personal_General = personal_general;
+            this.personal_General = personal_general;
         }
+
+        
 
         public List<Persona> Get_Personal_General()
         {

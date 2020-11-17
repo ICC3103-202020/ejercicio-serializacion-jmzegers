@@ -13,24 +13,26 @@ namespace Lab_2_POO
     [Serializable]
     public class Division
     {
-        private string Nombre;
-        private Persona Encargado;
-        private List<Persona> Empleados;
-        
-        public Division(string name, Persona encargado)
+        private string nombre;
+        private Persona encargado;
+
+        public string Nombre { get => nombre; set => nombre = value; }
+        public Persona Encargado { get => encargado; set => encargado = value; }
+
+        public Division(string nombre, Persona encargado)
         {
-            Encargado = encargado;
-            Nombre = name;
+            this.encargado = encargado;
+            this.nombre = nombre;
         }
 
         public string Get_Nombre()
         {
-            return Nombre;
+            return nombre;
         }
 
         public Persona Get_Encargado()
         {
-            return Encargado;
+            return encargado;
         }
 
     }
