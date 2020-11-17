@@ -1,0 +1,13 @@
+C:\Users\jmzeg_ibef1f0\source\repos\Lab_2_POO\Lab_2_POO\bin\Debug\netcoreapp3.1\Lab_2_POO.exe
+C:\Users\jmzeg_ibef1f0\source\repos\Lab_2_POO\Lab_2_POO\bin\Debug\netcoreapp3.1\Lab_2_POO.deps.json
+C:\Users\jmzeg_ibef1f0\source\repos\Lab_2_POO\Lab_2_POO\bin\Debug\netcoreapp3.1\Lab_2_POO.runtimeconfig.json
+C:\Users\jmzeg_ibef1f0\source\repos\Lab_2_POO\Lab_2_POO\bin\Debug\netcoreapp3.1\Lab_2_POO.runtimeconfig.dev.json
+C:\Users\jmzeg_ibef1f0\source\repos\Lab_2_POO\Lab_2_POO\bin\Debug\netcoreapp3.1\Lab_2_POO.dll
+C:\Users\jmzeg_ibef1f0\source\repos\Lab_2_POO\Lab_2_POO\bin\Debug\netcoreapp3.1\Lab_2_POO.pdb
+C:\Users\jmzeg_ibef1f0\source\repos\Lab_2_POO\Lab_2_POO\obj\Debug\netcoreapp3.1\Lab_2_POO.csprojAssemblyReference.cache
+C:\Users\jmzeg_ibef1f0\source\repos\Lab_2_POO\Lab_2_POO\obj\Debug\netcoreapp3.1\Lab_2_POO.AssemblyInfoInputs.cache
+C:\Users\jmzeg_ibef1f0\source\repos\Lab_2_POO\Lab_2_POO\obj\Debug\netcoreapp3.1\Lab_2_POO.AssemblyInfo.cs
+C:\Users\jmzeg_ibef1f0\source\repos\Lab_2_POO\Lab_2_POO\obj\Debug\netcoreapp3.1\Lab_2_POO.csproj.CoreCompileInputs.cache
+C:\Users\jmzeg_ibef1f0\source\repos\Lab_2_POO\Lab_2_POO\obj\Debug\netcoreapp3.1\Lab_2_POO.dll
+C:\Users\jmzeg_ibef1f0\source\repos\Lab_2_POO\Lab_2_POO\obj\Debug\netcoreapp3.1\Lab_2_POO.pdb
+C:\Users\jmzeg_ibef1f0\source\repos\Lab_2_POO\Lab_2_POO\obj\Debug\netcoreapp3.1\Lab_2_POO.genruntimeconfig.cache
